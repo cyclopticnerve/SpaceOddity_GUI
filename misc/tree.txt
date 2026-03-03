@@ -1,0 +1,83 @@
+[] SpaceOddity_GUI/
+   ├─ [] .vscode/
+   │     ├─ [] launch.json
+   │     ├─ [] settings.json
+   │     └─ [] tasks.json
+   ├─ [] bin/
+   │     └─ [] spaceoddity_gui.py
+   ├─ [] conf/
+   │     └─ [] spaceoddity_gui.json
+   ├─ [] docs/
+   │     ├─ [] API/
+   │     │     └─ [] src/
+   │     │           ├─ [] gui/
+   │     │           │     └─ [] python/
+   │     │           │           ├─ [] spaceoddity_gui_app.md
+   │     │           │           └─ [] spaceoddity_gui_win.md
+   │     │           ├─ [] spaceoddity_gui_base.md
+   │     │           └─ [] spaceoddity_gui.md
+   │     ├─ [] images/
+   │     │     └─ [] spaceoddity_gui.png
+   │     ├─ [] img/
+   │     │     └─ [] favicon.ico
+   │     └─ [] index.md
+   ├─ [] i18n/
+   │     ├─ [] locale/
+   │     │     └─ [] en/
+   │     │           └─ [] LC_MESSAGES/
+   │     │                 └─ [] spaceoddity_gui.mo
+   │     ├─ [] po/
+   │     │     ├─ [] en/
+   │     │     │     └─ [] spaceoddity_gui.po
+   │     │     └─ [] LINGUAS
+   │     └─ [] pot/
+   │           └─ [] spaceoddity_gui.pot
+   ├─ [] images/
+   │     └─ [] spaceoddity_gui.png
+   ├─ [] install/
+   │     ├─ [] install_base.py
+   │     ├─ [] install.py
+   │     └─ [] uninstall.py
+   ├─ [] log/
+   │     └─ [] spaceoddity_gui.log
+   ├─ [] misc/
+   │     ├─ [] checklists/
+   │     │     ├─ [] project.txt
+   │     │     └─ [] style.txt
+   │     ├─ [] default_files/
+   │     │     ├─ [] class.py
+   │     │     ├─ [] default.html
+   │     │     ├─ [] default.md
+   │     │     ├─ [] module.py
+   │     │     └─ [] window.py
+   │     ├─ [] release.txt
+   │     ├─ [] tree.html
+   │     └─ [] tree.txt
+   ├─ [] pyplate/
+   │     ├─ [] private/
+   │     │     └─ [] ABOUT
+   │     └─ [] project.json
+   ├─ [] src/
+   │     ├─ [] gui/
+   │     │     ├─ [] desktop/
+   │     │     │     └─ [] SpaceOddity_GUI.desktop
+   │     │     ├─ [] python/
+   │     │     │     ├─ [] spaceoddity_gui_app.py
+   │     │     │     └─ [] spaceoddity_gui_win.py
+   │     │     └─ [] ui/
+   │     │           ├─ [] __PP_DLG_FILE__.ui
+   │     │           ├─ [] dialogs.ui
+   │     │           └─ [] spaceoddity_gui_win.ui
+   │     ├─ [] spaceoddity_gui_base.py
+   │     └─ [] spaceoddity_gui.py
+   ├─ [] tests/
+   │     └─ [] ABOUT
+   ├─ [] todo/
+   │     └─ [] todo.txt
+   ├─ [] .gitignore
+   ├─ [] LICENSE.txt
+   ├─ [] README.md
+   ├─ [] develop.py
+   ├─ [] mkdocs.yml
+   ├─ [] pyproject.toml
+   └─ [] requirements.txt

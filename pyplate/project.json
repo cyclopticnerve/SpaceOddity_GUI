@@ -1,0 +1,119 @@
+{
+    "PUB_META": {
+        "META_SHORT_DESC": "Short description",
+        "META_VERSION": "0.0.0",
+        "META_KEYWORDS": [],
+        "META_DEPS": {
+            "Python 3.10+": "https://python.org"
+        },
+        "META_CATS": []
+    },
+    "PUB_BL": {
+        "SKIP_ALL": [
+            ".git",
+            ".venv*",
+            ".VSCodeCounter",
+            "*.code-workspace",
+            "dist",
+            "docs",
+            "i18n",
+            "misc",
+            "site",
+            "todo",
+            "LICENSE.txt",
+            "requirements.txt",
+            "**/__pycache__",
+            "**/*.egg-info",
+            "pyplate"
+        ],
+        "SKIP_CONTENTS": [
+            "**/*.png",
+            "**/*.jpg",
+            "**/*.jpeg",
+            "**/*.ico"
+        ],
+        "SKIP_HEADER": [],
+        "SKIP_CODE": [
+            "conf"
+        ],
+        "SKIP_TREE": [
+            ".git",
+            ".venv*",
+            ".VSCodeCounter",
+            "dist",
+            "site",
+            "**/__pycache__",
+            "**/*.egg-info"
+        ]
+    },
+    "PUB_DBG": {
+        "DBG_GIT": true,
+        "DBG_VENV": true,
+        "DBG_I18N": true,
+        "DBG_DOCS": true,
+        "DBG_TREE": true,
+        "DBG_DIST": false
+    },
+    "PUB_DIST": {
+        "bin": "assets",
+        "conf": "assets",
+        "i18n": "assets",
+        "images": "assets",
+        "install": "assets",
+        "src": "assets",
+        "requirements.txt": "assets/install"
+    },
+    "PUB_DOCS": {
+        "DOCS_THEME": "",
+        "DOCS_USE_RM": false,
+        "DOCS_MAKE_API": true,
+        "DOCS_DIR_API": [
+            "src"
+        ]
+    },
+    "PUB_I18N": {
+        "DOMAIN": "spaceoddity_gui",
+        "SOURCES": [
+            "bin",
+            "install",
+            "src",
+            "develop.py"
+        ],
+        "CLANGS": {
+            "Python": [
+                ".py"
+            ],
+            "Glade": [
+                ".ui",
+                ".glade"
+            ],
+            "Desktop": [
+                ".desktop"
+            ]
+        },
+        "WLANGS": [
+            "en"
+        ],
+        "CHARSET": "UTF-8"
+    },
+    "PUB_INST": {
+        "INST_NAME": "SpaceOddity_GUI",
+        "INST_VER": "0.0.0",
+        "INST_DESK": true,
+        "INST_CONT": {
+            "bin/spaceoddity_gui": ".local/bin",
+            "conf": ".local/share/spaceoddity_gui",
+            "i18n": ".local/share/spaceoddity_gui",
+            "images": ".local/share/spaceoddity_gui",
+            "install": ".local/share/spaceoddity_gui",
+            "src": ".local/share/spaceoddity_gui",
+            "uninstall.py": ".local/share/spaceoddity_gui",
+            "src/gui/desktop/SpaceOddity_GUI.desktop": ".local/share/applications"
+        },
+        "UNINST_CONT": [
+            ".local/bin/spaceoddity_gui",
+            ".local/share/spaceoddity_gui",
+            ".local/share/applications/SpaceOddity_GUI.desktop"
+        ]
+    }
+}

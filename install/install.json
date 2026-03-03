@@ -1,0 +1,20 @@
+{
+    "INST_NAME": "SpaceOddity_GUI",
+    "INST_VER": "0.0.0",
+    "INST_DESK": true,
+    "INST_CONT": {
+        "bin/spaceoddity_gui": ".local/bin",
+        "conf": ".local/share/spaceoddity_gui",
+        "i18n": ".local/share/spaceoddity_gui",
+        "images": ".local/share/spaceoddity_gui",
+        "install": ".local/share/spaceoddity_gui",
+        "src": ".local/share/spaceoddity_gui",
+        "uninstall.py": ".local/share/spaceoddity_gui",
+        "src/gui/desktop/SpaceOddity_GUI.desktop": ".local/share/applications"
+    },
+    "UNINST_CONT": [
+        ".local/bin/spaceoddity_gui",
+        ".local/share/spaceoddity_gui",
+        ".local/share/applications/SpaceOddity_GUI.desktop"
+    ]
+}

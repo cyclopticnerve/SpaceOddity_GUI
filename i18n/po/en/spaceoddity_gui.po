@@ -1,0 +1,343 @@
+# spaceoddity_gui translation template
+# Copyright (C) 2026 cyclopticnerve
+# This file is distributed under the same license as the spaceoddity_gui package.
+# FIRST AUTHOR cyclopticnerve@gmail.com, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: 0.0.0\n"
+"Report-Msgid-Bugs-To: cyclopticnerve@gmail.com\n"
+"POT-Creation-Date: 2026-02-26 16:45-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. I18N: done with step
+#: develop.py:79
+#: install/install_base.py:167
+msgid "Done"
+msgstr ""
+
+#. I18N: step failed
+#: develop.py:81
+#: install/install_base.py:169
+msgid "Failed"
+msgstr ""
+
+#. I18N: show the venv step
+#: develop.py:83
+#: install/install.py:100
+msgid "Making venv folder... "
+msgstr ""
+
+#. I18N: show the reqs step
+#: develop.py:85
+#: install/install.py:102
+msgid "Installing requirements... "
+msgstr ""
+
+#. I18N: an error occurred
+#: develop.py:90
+msgid "Error: "
+msgstr ""
+
+#. I18N: install the program
+#: install/install.py:95
+msgid "Installing {} Version {}"
+msgstr ""
+
+#. I18N: show the copy step
+#: install/install.py:98
+msgid "Copying files... "
+msgstr ""
+
+#. I18N: show desktop step
+#: install/install.py:104
+msgid "Fixing .desktop file... "
+msgstr ""
+
+#. I18N: done installing
+#: install/install.py:106
+msgid "{} installed"
+msgstr ""
+
+#. I18N: ask to overwrite same version
+#: install/install.py:111
+msgid ""
+"The current version of this program is already installed.\n"
+"Do you want to overwrite?"
+msgstr ""
+
+#. I18N: ask to overwrite newer version
+#: install/install.py:116
+msgid ""
+"A newer version of this program is currently installed.\n"
+"Do you want to overwrite?"
+msgstr ""
+
+#. I18N: version numbers invalid
+#: install/install.py:122
+msgid "One or both version numbers are invalid"
+msgstr ""
+
+#. I18N: src path invalid
+#: install/install.py:125
+msgid "Source path can not be {}"
+msgstr ""
+
+#. I18N: dst path invalid
+#: install/install.py:128
+msgid "Destination path can not be {}"
+msgstr ""
+
+#. I18N: can't find .desktop
+#: install/install.py:130
+msgid "No desktop files present"
+msgstr ""
+
+#. I18N: dry mode help
+#: install/install_base.py:121
+msgid "enable dry run mode"
+msgstr ""
+
+#. I18N: force option help
+#: install/install_base.py:128
+msgid "force install this program"
+msgstr ""
+
+#. I18N: quiet option help
+#: install/install_base.py:135
+msgid "do not print about message"
+msgstr ""
+
+#. I18N: help option help
+#: install/install_base.py:142
+#: src/spaceoddity_gui_base.py:153
+msgid "show this help message and exit"
+msgstr ""
+
+#. I18N if using argparse, add help at end of about
+#: install/install_base.py:154
+#: src/spaceoddity_gui_base.py:171
+msgid "Use -h for help"
+msgstr ""
+
+#. I18N: process aborted
+#: install/install_base.py:171
+#: src/spaceoddity_gui_base.py:192
+msgid "Aborted"
+msgstr ""
+
+#. I18N: run external script
+#: install/install_base.py:174
+msgid "Running {}"
+msgstr ""
+
+#. I18N: answer yes
+#: install/install_base.py:180
+#: src/spaceoddity_gui_base.py:181
+msgid "y"
+msgstr ""
+
+#. I18N: answer no
+#: install/install_base.py:182
+#: src/spaceoddity_gui_base.py:183
+msgid "N"
+msgstr ""
+
+#. I18N: an error occurred
+#: install/install_base.py:188
+#: src/spaceoddity_gui_base.py:198
+msgid "Error:"
+msgstr ""
+
+#. I18N: config file not found
+#: install/install_base.py:191
+msgid "File {} not found"
+msgstr ""
+
+#. I18N: config file is not valid json
+#: install/install_base.py:194
+msgid "File {} is not a JSON file"
+msgstr ""
+
+#. I18N: uninstall the program
+#: install/uninstall.py:87
+msgid "Uninstalling {}"
+msgstr ""
+
+#. I18N: show the copy step
+#: install/uninstall.py:89
+msgid "Deleting files... "
+msgstr ""
+
+#. I18N: done uninstalling
+#: install/uninstall.py:92
+msgid "{} uninstalled"
+msgstr ""
+
+#. I18N: ask to uninstall
+#: install/uninstall.py:97
+#: src/spaceoddity_gui_base.py:186
+msgid ""
+"This will uninstall {}.\n"
+"Do you want to continue?"
+msgstr ""
+
+#. I18N: program name
+#: src/gui/desktop/SpaceOddity_GUI.desktop:18
+msgid "SpaceOddity_GUI"
+msgstr ""
+
+#. I18N: short description label text
+#. I18N: short description
+#: src/gui/desktop/SpaceOddity_GUI.desktop:21
+#: src/gui/ui/dialogs.ui:12
+msgid "Short description"
+msgstr ""
+
+#: src/gui/ui/__PP_DLG_FILE__.ui:13
+msgctxt "comment for program     description translation"
+msgid "Short description"
+msgstr ""
+
+#: src/gui/ui/__PP_DLG_FILE__.ui:15
+msgctxt "Github repository translation"
+msgid "GitHub repository"
+msgstr ""
+
+#: src/gui/ui/__PP_DLG_FILE__.ui:55
+msgctxt "save changes"
+msgid "Save changes before closing?"
+msgstr ""
+
+#: src/gui/ui/__PP_DLG_FILE__.ui:56
+msgctxt "secondary text"
+msgid "If you don't save, changes will be permanently lost."
+msgstr ""
+
+#: src/gui/ui/__PP_DLG_FILE__.ui:71
+msgctxt "Close without saving"
+msgid "Close without saving"
+msgstr ""
+
+#: src/gui/ui/__PP_DLG_FILE__.ui:87
+msgctxt "Cancel"
+msgid "Cancel"
+msgstr ""
+
+#: src/gui/ui/__PP_DLG_FILE__.ui:100
+msgctxt "Save"
+msgid "Save"
+msgstr ""
+
+#. I18N: Github URL label text
+#: src/gui/ui/dialogs.ui:14
+msgid "GitHub repository"
+msgstr ""
+
+#. I18N: dialog main text
+#: src/gui/ui/dialogs.ui:53
+msgid "Save changes before closing?"
+msgstr ""
+
+#. I18N: dialog secondary text
+#: src/gui/ui/dialogs.ui:54
+msgid "If you don't save, changes will be permanently lost."
+msgstr ""
+
+#. I18N: Close without saving button text
+#: src/gui/ui/dialogs.ui:68
+msgid "Close without saving"
+msgstr ""
+
+#. I18N: Cancel button text
+#: src/gui/ui/dialogs.ui:84
+#: src/gui/ui/spaceoddity_gui_win.ui:60
+msgid "Cancel"
+msgstr ""
+
+#. I18N: Save button text
+#: src/gui/ui/dialogs.ui:97
+#: src/gui/ui/spaceoddity_gui_win.ui:44
+msgid "Save"
+msgstr ""
+
+#. I18N: About button text
+#: src/gui/ui/spaceoddity_gui_win.ui:29
+msgid "About..."
+msgstr ""
+
+#. I18N: Show the About dialog
+#: src/gui/ui/spaceoddity_gui_win.ui:33
+msgid "Show the About dialog"
+msgstr ""
+
+#. I18N: save changes
+#: src/gui/ui/spaceoddity_gui_win.ui:48
+msgid "Save any changes and leave window open"
+msgstr ""
+
+#. I18N: save without changes
+#: src/gui/ui/spaceoddity_gui_win.ui:64
+msgid "Abandon any changes and close window"
+msgstr ""
+
+#. I18N: OK button text
+#: src/gui/ui/spaceoddity_gui_win.ui:76
+msgid "OK"
+msgstr ""
+
+#. I18N: save changes and close
+#: src/gui/ui/spaceoddity_gui_win.ui:80
+msgid "Save any changes and close window"
+msgstr ""
+
+#: src/gui/ui/spaceoddity_gui_win.ui:98
+msgid "button"
+msgstr ""
+
+#. I18N: context for this string
+#: src/spaceoddity_gui.py:212
+msgid "this is func (DEBUG)"
+msgstr ""
+
+#. I18N: context for this string
+#: src/spaceoddity_gui.py:216
+msgid "this is func"
+msgstr ""
+
+#. I18N: config file option help
+#: src/spaceoddity_gui_base.py:137
+msgid "load configuration from file"
+msgstr ""
+
+#. I18N: config file dest (indicate it should be a file name/path)
+#: src/spaceoddity_gui_base.py:139
+msgid "FILE"
+msgstr ""
+
+#. I18N: debug mode help
+#: src/spaceoddity_gui_base.py:146
+msgid "enable debugging mode"
+msgstr ""
+
+#. I18N: uninstall option help
+#: src/spaceoddity_gui_base.py:160
+msgid "uninstall this program"
+msgstr ""
+
+#. I18N: uninstall not found
+#: src/spaceoddity_gui_base.py:200
+msgid "Uninstall files not found"
+msgstr ""
+
+#. I18N: could not find -c file
+#: src/spaceoddity_gui_base.py:203
+msgid "Config file {} not found"
+msgstr ""
