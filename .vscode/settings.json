@@ -6,5 +6,14 @@
             "packageManager": "ms-python.python:pip"
         }
     ],
-    "editor.formatOnType": true
+    "editor.formatOnType": true,
+    "cSpell.words": [
+        "gchararray",
+        "halign",
+        "hexpand",
+        "rgba",
+        "spaceoddity",
+        "Spaceoddity",
+        "vexpand"
+    ]
 }
