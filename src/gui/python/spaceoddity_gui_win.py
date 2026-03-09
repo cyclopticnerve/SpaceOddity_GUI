@@ -25,10 +25,11 @@ from pathlib import Path
 # ------------------------------------------------------------------------------
 # local imports
 from load import do_load
+from save import do_save
 
 # ------------------------------------------------------------------------------
 # venv imports
-from cnlib import cnfunctions as F
+from cnlib import cnfunctions as F  # pylint: disable=import-error
 import gi
 
 gi.require_version("Gtk", "3.0")
@@ -285,5 +286,7 @@ class SpaceoddityGuiWin(Gtk.ApplicationWindow):
         """
         Save control values to config file
         """
+
+        do_save(self.builder, self.app.dict_cfg)
 
 # -)
