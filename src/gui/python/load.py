@@ -93,26 +93,26 @@ def do_load(builder: Gtk.Builder, dict_cfg: dict) -> None:
     dict_info = dict_cap[K.S_KEY_CAPTION_INFO]
 
     ctl = builder.get_object("chk_info_title")
-    val = dict_info[K.S_KEY_CAPTION_INFO_TITLE]
+    val = dict_info[K.S_KEY_APOD_TITLE]
     ctl.set_active(val)
 
     ctl = builder.get_object("chk_info_date")
-    val = dict_info[K.S_KEY_CAPTION_INFO_DATE]
+    val = dict_info[K.S_KEY_APOD_DATE]
     ctl.set_active(val)
 
     ctl = builder.get_object("chk_info_copyright")
-    val = dict_info[K.S_KEY_CAPTION_INFO_COPY]
+    val = dict_info[K.S_KEY_APOD_COPY]
     ctl.set_active(val)
 
     ctl = builder.get_object("chk_info_explanation")
-    val = dict_info[K.S_KEY_CAPTION_INFO_EXP]
+    val = dict_info[K.S_KEY_APOD_EXP]
     ctl.set_active(val)
 
     # --------------------------------------------------------------------------
 
     dict_font = dict_cap[K.S_KEY_CAPTION_FONT]
 
-    # TODO: need to set font using path (fc-list) PIL DOES THIS!!!
+    # TODO: need to set font using path (fc-list)
     # NB: initial name null, "None", "", "Normal" work on my machine
     ctl = builder.get_object("btn_font")
     val = dict_font[K.S_KEY_CAPTION_FONT_NAME]
