@@ -143,6 +143,23 @@ class SpaceoddityGuiWin(Gtk.ApplicationWindow):
         self.app.show_about_dialog()
 
     # --------------------------------------------------------------------------
+    # Called when the Logs button is clicked
+    # --------------------------------------------------------------------------
+    def _btn_log_clicked(self, _obj):
+        """
+        Called when the Logs button is clicked
+
+        Args:
+            _obj: Not used
+
+        The Logs button was clicked.
+        """
+
+        print("btn_log: clicked")
+
+        # TODO: view logs
+
+    # --------------------------------------------------------------------------
     # Called when the Save button is clicked
     # --------------------------------------------------------------------------
     def _btn_save_clicked(self, _obj):
