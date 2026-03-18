@@ -126,9 +126,9 @@ class CNUninstall(CNInstallBase):
     # Public methods
     # --------------------------------------------------------------------------
 
-    # ------------------------------------------------------------------------------
+    # --------------------------------------------------------------------------
     # Uninstall the program
-    # ------------------------------------------------------------------------------
+    # --------------------------------------------------------------------------
     def main(self):
         """
         Uninstall the program
@@ -159,20 +159,6 @@ class CNUninstall(CNInstallBase):
     # --------------------------------------------------------------------------
 
     # NB: these are the main steps, called in order from main
-
-    # --------------------------------------------------------------------------
-    # Boilerplate to use at the start of main
-    # --------------------------------------------------------------------------
-    # def _setup(self):
-    #     """
-    #     Boilerplate to use at the start of main
-
-    #     Perform some mundane stuff like setting properties.
-    #     If you implement this function. make sure to call super() LAST!!!
-    #     """
-
-    #     # do setup
-    #     super()._setup()
 
     # --------------------------------------------------------------------------
     # Get project info
