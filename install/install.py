@@ -40,6 +40,7 @@ P_DIR_INSTALL = P_DIR_ASSETS / "install"
 P_DIR_VENV = Path.home() / ".local/share/spaceoddity_gui/.venv-spaceoddity_gui"
 
 # get files
+P_FILE_UNINST = Path.home() / "__PP_USR_INST__/__PP_NAME_UNINST__" 
 P_FILE_CFG_UNINST = (
     Path.home() / ".local/share/spaceoddity_gui/install/install.json"
 )
@@ -224,6 +225,10 @@ class CNInstall(CNInstallBase):
         # check for existing/old version
         self._compare_version()
 
+        # uninstall any existing before doing the new install
+        # NB: to avoid artifacts/files that no longer exist
+        self._do_external(P_FILE_UNINST)
+
         # make the venv on the user's comp
         self._make_venv()
 
@@ -295,11 +300,13 @@ class CNInstall(CNInstallBase):
         if not P_FILE_CFG_UNINST or not P_FILE_CFG_UNINST.exists():
             return
 
+        dict_cfg_old = {}
         try:
             # get info from old cfg
             dict_cfg_old = self._get_dict_from_file(P_FILE_CFG_UNINST)
         except OSError as e:
             print(self.S_ERR_ERR, e)
+            return
 
         # check versions
         ver_old = dict_cfg_old[self.S_KEY_INST_VER]
@@ -543,7 +550,7 @@ class CNInstall(CNInstallBase):
         if ver_old == ver_new:
             return self.I_VER_SAME
 
-        # --------------------------------------------------------------------------
+        # ----------------------------------------------------------------------
 
         # compare version string parts (only x.x.x)
         res_old = re.search(self.R_VERSION_VALID, ver_old)
@@ -571,7 +578,7 @@ class CNInstall(CNInstallBase):
             if old_val > new_val:
                 return self.I_VER_OLDER
 
-        # --------------------------------------------------------------------------
+        # ----------------------------------------------------------------------
 
         # still going, check pre
         pre_old = res_old.group(self.R_VERSION_GROUP_PRE)
@@ -643,7 +650,7 @@ class CNInstall(CNInstallBase):
             if len_pre_new > len_pre_old:
                 return self.I_VER_NEWER
 
-        # --------------------------------------------------------------------------
+        # ----------------------------------------------------------------------
 
         # error in one or both versions
         return self.I_VER_ERROR
