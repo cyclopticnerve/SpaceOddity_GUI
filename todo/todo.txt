@@ -1,0 +1,4 @@
+FIXME: load/save new dict layout
+FIXME: keys
+
+FIXME: path to installed spod cfg
