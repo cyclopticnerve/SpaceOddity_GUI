@@ -22,11 +22,8 @@ S_KEY_CAPTION_POS = "caption_pos"
 S_KEY_CAPTION_WRAP = "caption_wrap"
 
 # what to show
+# NB: sub keys are same as S_KEY_APOD_...
 S_KEY_CAPTION_INFO = "caption_info"
-S_KEY_CAPTION_INFO_TITLE = "caption_info_title"
-S_KEY_CAPTION_INFO_DATE = "caption_info_date"
-S_KEY_CAPTION_INFO_COPY = "caption_info_copy"
-S_KEY_CAPTION_INFO_EXP = "caption_info_exp"
 
 # font stuff
 S_KEY_CAPTION_FONT = "caption_font"
