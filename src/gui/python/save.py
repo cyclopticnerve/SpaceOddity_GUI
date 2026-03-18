@@ -20,7 +20,7 @@ private functions declared here.
 # ------------------------------------------------------------------------------
 
 # venv imports
-from cnlib import cnfunctions as F  # pylint: disable=import-error
+from cnlib import cnfunctions as F  # type: ignore # pylint: disable=import-error
 import gi
 
 gi.require_version("Gtk", "3.0")
@@ -35,6 +35,7 @@ from gi.repository import Gtk, Gdk, Pango  # type: ignore
 
 # local imports
 import keys as K
+import sanitize
 
 # from sanitize import do_sanitize
 
@@ -58,7 +59,7 @@ def do_save(builder: Gtk.Builder, dict_cfg: dict) -> None:
     # --------------------------------------------------------------------------
 
     # sanitize dict first
-    # do_sanitize(dict_cfg)
+    sanitize.do_sanitize(dict_cfg)
 
     # --------------------------------------------------------------------------
 
@@ -94,38 +95,35 @@ def do_save(builder: Gtk.Builder, dict_cfg: dict) -> None:
 
     ctl = builder.get_object("chk_info_title")
     val = ctl.get_active()
-    dict_info[K.S_KEY_CAPTION_INFO_TITLE] = val
+    dict_info[K.S_KEY_APOD_TITLE] = val
 
     ctl = builder.get_object("chk_info_date")
     val = ctl.get_active()
-    dict_info[K.S_KEY_CAPTION_INFO_DATE] = val
+    dict_info[K.S_KEY_APOD_DATE] = val
 
     ctl = builder.get_object("chk_info_copyright")
     val = ctl.get_active()
-    dict_info[K.S_KEY_CAPTION_INFO_COPY] = val
+    dict_info[K.S_KEY_APOD_COPY] = val
 
     ctl = builder.get_object("chk_info_explanation")
     val = ctl.get_active()
-    dict_info[K.S_KEY_CAPTION_INFO_EXP] = val
+    dict_info[K.S_KEY_APOD_EXP] = val
 
     # --------------------------------------------------------------------------
 
     dict_font = dict_cap[K.S_KEY_CAPTION_FONT]
 
-    # TODO: need to get font path
-    # could use fc-list
+    # TODO: need to get font path (fc-list)
     ctl = builder.get_object("btn_font")
     val = ctl.get_font_name()
     dict_font[K.S_KEY_CAPTION_FONT_NAME] = val
 
-    # --------------------------------------------------------------------------
     # --------------------------------------------------------------------------
 
     pfd = Pango.font_description_from_string(val)
     print(pfd.get_family())
     print(pfd.get_style())
 
-    # --------------------------------------------------------------------------
     # --------------------------------------------------------------------------
 
     ctl = builder.get_object("spin_font_size")
