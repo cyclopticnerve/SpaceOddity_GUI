@@ -47,7 +47,7 @@ P_DIR_LOG = P_DIR_PRJ / "log"
 
 # path to default config file
 # NB: if not using, set to None
-# FIXME: no abs path
+# FIXME: path to installed spod cfg
 P_CFG_DEF = Path.home() / "Projects/Python/SpaceOddity/conf/spaceoddity.json"
 
 # path to default log file
@@ -93,7 +93,7 @@ class SpaceoddityGuiBase:
     # --------------------------------------------------------------------------
     # bools
 
-    # set load/save oder
+    # set load/save order
     # NB: if true, only load from first file found, in this order:
     # 1. cmdline (-c)
     # 2. conf dir (P_CFG_DEF)
