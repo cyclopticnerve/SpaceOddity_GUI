@@ -39,9 +39,6 @@ R_BOX_RAD = [0, 100]
 R_BOX_PAD = [0, 100]
 R_EXT_PAD = [0, 100]
 
-# TODO: there may be more onus on this func to fix F.bool and F.clamp to
-# separate vals (like F.interpolate) as i update cnlib
-
 # ------------------------------------------------------------------------------
 # Sanitize the dictionary in place
 # ------------------------------------------------------------------------------
@@ -60,10 +57,10 @@ def do_sanitize(dict_cfg: dict):
     # these are in the cron dict
     dict_cron = dict_cfg[K.S_KEY_CRON]
 
-    dict_cron[K.S_KEY_CRON_ENABLED] = F.do_bool(
+    dict_cron[K.S_KEY_CRON_ENABLED] = F.bool(
         dict_cron[K.S_KEY_CRON_ENABLED]
     )
-    dict_cron[K.S_KEY_CRON_INTERVAL] = F.clamp(
+    dict_cron[K.S_KEY_CRON_INTERVAL] = _do_clamp(
         dict_cron[K.S_KEY_CRON_INTERVAL], R_INTERVAL
     )
 
@@ -71,13 +68,13 @@ def do_sanitize(dict_cfg: dict):
 
     dict_cap = dict_cfg[K.S_KEY_CAPTION]
 
-    dict_cap[K.S_KEY_CAPTION_SHOW] = F.do_bool(
+    dict_cap[K.S_KEY_CAPTION_SHOW] = F.bool(
         dict_cap[K.S_KEY_CAPTION_SHOW]
     )
-    dict_cap[K.S_KEY_CAPTION_POS] = F.clamp(
+    dict_cap[K.S_KEY_CAPTION_POS] = _do_clamp(
         dict_cap[K.S_KEY_CAPTION_POS], R_POS
     )
-    dict_cap[K.S_KEY_CAPTION_WRAP] = F.clamp(
+    dict_cap[K.S_KEY_CAPTION_WRAP] = _do_clamp(
         dict_cap[K.S_KEY_CAPTION_WRAP], R_WRAP
     )
 
@@ -85,16 +82,16 @@ def do_sanitize(dict_cfg: dict):
 
     dict_info = dict_cap[K.S_KEY_CAPTION_INFO]
 
-    dict_info[K.S_KEY_CAPTION_INFO_TITLE] = F.do_bool(
+    dict_info[K.S_KEY_CAPTION_INFO_TITLE] = F.bool(
         dict_info[K.S_KEY_CAPTION_INFO_TITLE]
     )
-    dict_info[K.S_KEY_CAPTION_INFO_DATE] = F.do_bool(
+    dict_info[K.S_KEY_CAPTION_INFO_DATE] = F.bool(
         dict_info[K.S_KEY_CAPTION_INFO_DATE]
     )
-    dict_info[K.S_KEY_CAPTION_INFO_COPY] = F.do_bool(
+    dict_info[K.S_KEY_CAPTION_INFO_COPY] = F.bool(
         dict_info[K.S_KEY_CAPTION_INFO_COPY]
     )
-    dict_info[K.S_KEY_CAPTION_INFO_EXP] = F.do_bool(
+    dict_info[K.S_KEY_CAPTION_INFO_EXP] = F.bool(
         dict_info[K.S_KEY_CAPTION_INFO_EXP]
     )
 
@@ -105,13 +102,13 @@ def do_sanitize(dict_cfg: dict):
     dict_font[K.S_KEY_CAPTION_FONT_NAME] = str(
         dict_font[K.S_KEY_CAPTION_FONT_NAME]
     )
-    dict_font[K.S_KEY_CAPTION_FONT_SIZE] = F.clamp(
+    dict_font[K.S_KEY_CAPTION_FONT_SIZE] = _do_clamp(
         dict_font[K.S_KEY_CAPTION_FONT_SIZE], R_FONT_SIZE
     )
     dict_font[K.S_KEY_CAPTION_FONT_COLOR] = _clamp_list(
         dict_font[K.S_KEY_CAPTION_FONT_COLOR], R_COLOR
     )
-    dict_font[K.S_KEY_CAPTION_FONT_TRANS] = F.clamp(
+    dict_font[K.S_KEY_CAPTION_FONT_TRANS] = _do_clamp(
         dict_font[K.S_KEY_CAPTION_FONT_TRANS], R_COLOR
     )
 
@@ -122,13 +119,13 @@ def do_sanitize(dict_cfg: dict):
     dict_box[K.S_KEY_CAPTION_BOX_COLOR] = _clamp_list(
         dict_box[K.S_KEY_CAPTION_BOX_COLOR], R_COLOR
     )
-    dict_box[K.S_KEY_CAPTION_BOX_TRANS] = F.clamp(
+    dict_box[K.S_KEY_CAPTION_BOX_TRANS] = _do_clamp(
         dict_box[K.S_KEY_CAPTION_BOX_TRANS], R_COLOR
     )
-    dict_box[K.S_KEY_CAPTION_BOX_RAD] = F.clamp(
+    dict_box[K.S_KEY_CAPTION_BOX_RAD] = _do_clamp(
         dict_box[K.S_KEY_CAPTION_BOX_RAD], R_BOX_RAD
     )
-    dict_box[K.S_KEY_CAPTION_BOX_PAD] = F.clamp(
+    dict_box[K.S_KEY_CAPTION_BOX_PAD] = _do_clamp(
         dict_box[K.S_KEY_CAPTION_BOX_PAD], R_BOX_PAD
     )
 
@@ -136,24 +133,40 @@ def do_sanitize(dict_cfg: dict):
 
     dict_pad = dict_cap[K.S_KEY_CAPTION_PAD]
 
-    dict_pad[K.S_KEY_CAPTION_PAD_L] = F.clamp(
+    dict_pad[K.S_KEY_CAPTION_PAD_L] = _do_clamp(
         dict_pad[K.S_KEY_CAPTION_PAD_L], R_EXT_PAD
     )
-    dict_pad[K.S_KEY_CAPTION_PAD_T] = F.clamp(
+    dict_pad[K.S_KEY_CAPTION_PAD_T] = _do_clamp(
         dict_pad[K.S_KEY_CAPTION_PAD_T], R_EXT_PAD
     )
-    dict_pad[K.S_KEY_CAPTION_PAD_R] = F.clamp(
+    dict_pad[K.S_KEY_CAPTION_PAD_R] = _do_clamp(
         dict_pad[K.S_KEY_CAPTION_PAD_R], R_EXT_PAD
     )
-    dict_pad[K.S_KEY_CAPTION_PAD_B] = F.clamp(
+    dict_pad[K.S_KEY_CAPTION_PAD_B] = _do_clamp(
         dict_pad[K.S_KEY_CAPTION_PAD_B], R_EXT_PAD
     )
 
 
 # ------------------------------------------------------------------------------
-# Clamp all values in a list (used for color vals 0-255)
+# Clamp a value to a range
 # ------------------------------------------------------------------------------
-def _clamp_list(list_in: list[int], vals: list[int]) -> list[int]:
+def _do_clamp(val_in: float, vals: list[int]) -> float:
+    """
+    Clamp a value to a range
+
+    Args:
+        val_in: value to be clamped
+        vals: list of min/max range
+    """
+
+    res = F.clamp(val_in, vals[0], vals[1])
+    return res
+
+
+# ------------------------------------------------------------------------------
+# Clamp all values in a list (used for color vals)
+# ------------------------------------------------------------------------------
+def _clamp_list(list_in: list[int], vals: list[int]) -> list[float]:
     """
     Clamp all values in a list (used for color vals 0-255)
 
@@ -164,7 +177,8 @@ def _clamp_list(list_in: list[int], vals: list[int]) -> list[int]:
     :return: A new list with clamped values
     :rtype: list[int]
     """
-    new_list = [F.clamp(item, vals) for item in list_in]
+
+    new_list = [F.clamp(item, vals[0], vals[1]) for item in list_in]
     return new_list
 
 
