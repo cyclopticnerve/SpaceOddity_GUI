@@ -57,7 +57,7 @@ def do_sanitize(dict_cfg: dict):
     # these are in the cron dict
     dict_cron = dict_cfg[K.S_KEY_CRON]
 
-    dict_cron[K.S_KEY_CRON_ENABLED] = F.bool(
+    dict_cron[K.S_KEY_CRON_ENABLED] = bool(
         dict_cron[K.S_KEY_CRON_ENABLED]
     )
     dict_cron[K.S_KEY_CRON_INTERVAL] = _do_clamp(
@@ -68,7 +68,7 @@ def do_sanitize(dict_cfg: dict):
 
     dict_cap = dict_cfg[K.S_KEY_CAPTION]
 
-    dict_cap[K.S_KEY_CAPTION_SHOW] = F.bool(
+    dict_cap[K.S_KEY_CAPTION_SHOW] = bool(
         dict_cap[K.S_KEY_CAPTION_SHOW]
     )
     dict_cap[K.S_KEY_CAPTION_POS] = _do_clamp(
@@ -82,16 +82,16 @@ def do_sanitize(dict_cfg: dict):
 
     dict_info = dict_cap[K.S_KEY_CAPTION_INFO]
 
-    dict_info[K.S_KEY_CAPTION_INFO_TITLE] = F.bool(
+    dict_info[K.S_KEY_CAPTION_INFO_TITLE] = bool(
         dict_info[K.S_KEY_CAPTION_INFO_TITLE]
     )
-    dict_info[K.S_KEY_CAPTION_INFO_DATE] = F.bool(
+    dict_info[K.S_KEY_CAPTION_INFO_DATE] = bool(
         dict_info[K.S_KEY_CAPTION_INFO_DATE]
     )
-    dict_info[K.S_KEY_CAPTION_INFO_COPY] = F.bool(
+    dict_info[K.S_KEY_CAPTION_INFO_COPY] = bool(
         dict_info[K.S_KEY_CAPTION_INFO_COPY]
     )
-    dict_info[K.S_KEY_CAPTION_INFO_EXP] = F.bool(
+    dict_info[K.S_KEY_CAPTION_INFO_EXP] = bool(
         dict_info[K.S_KEY_CAPTION_INFO_EXP]
     )
 
